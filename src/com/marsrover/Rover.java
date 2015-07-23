@@ -15,6 +15,9 @@ public class Rover {
     }
 
     public char direction() {
-        return 'N';
+        if (this.direction == 'E')
+            return 'N';
+        else
+            return 'W';
     }
 }
