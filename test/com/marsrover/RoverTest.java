@@ -51,4 +51,13 @@ public class RoverTest {
 
         assertEquals('S', rover.direction());
     }
+
+    @Test
+    public void roverShouldTurnWestFromSouthWhenRightIsApplied() {
+        Rover rover = new Rover(0, 0, 'S');
+
+        rover.turnRight();
+
+        assertEquals('W', rover.direction());
+    }
 }

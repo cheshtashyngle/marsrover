@@ -27,6 +27,9 @@ public class Rover {
     }
 
     public void turnRight() {
-        this.direction = 'S';
+        if (this.direction == 'E')
+            this.direction = 'S';
+        else
+            this.direction = 'W';
     }
 }
