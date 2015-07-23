@@ -29,7 +29,9 @@ public class Rover {
     public void turnRight() {
         if (this.direction == 'E')
             this.direction = 'S';
-        else
+        else if (this.direction == 'S')
             this.direction = 'W';
+        else
+            this.direction = 'N';
     }
 }
