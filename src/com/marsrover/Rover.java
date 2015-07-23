@@ -12,16 +12,21 @@ public class Rover {
     }
 
     public void turnLeft() {
+        if (this.direction == 'E')
+            this.direction = 'N';
+        else if (this.direction == 'N')
+            this.direction = 'W';
+        else if (this.direction == 'W')
+            this.direction = 'S';
+        else
+            this.direction = 'E';
     }
 
     public char direction() {
-        if (this.direction == 'E')
-            return 'N';
-        else if (this.direction == 'N')
-            return 'W';
-        else if (this.direction == 'W')
-            return 'S';
-        else
-            return 'E';
+        return direction;
+    }
+
+    public void turnRight() {
+        this.direction = 'S';
     }
 }
